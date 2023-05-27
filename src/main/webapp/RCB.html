@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>RCB Fan Club Page</title>
+		<link rel="stylesheet" href="rcb.css">
+	</head>
+	<body>
+		<header style="background-color:rgb(128, 128, 128) ;">
+			<div class="container" >
+				<img src="rcb.png" alt="RCB Logo" class="logo">
+				<nav >
+					<ul>
+						<li><a href="http://localhost:8080/employee_table/add.html">Add New Member</a></li>
+						<li><a href="http://localhost:8080/employee_table/delete.html">Remove Member</a></li>
+						<li><a href="http://localhost:8080/employee_table/Update.html">Update Details</a></li>
+						<li><a href="http://localhost:8080/employee_table/petch.html">Fetch Details</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<h1>RCB Fan Club</h1>
+				<p>Welcome to the official fan club of Royal Challengers Bengaluru! Join us in supporting the team in the upcoming IPL season.</p>
+				<div class="buttons">
+					<button class="button" id="add-member-btn">Add New Member</button>
+					<button class="button" id="remove-member-btn">Remove Member</button>
+					<button class="button" id="update-details-btn">Update Details</button>
+					<button class="button" id="fetch-details-btn">Fetch Details</button>
+				</div>
+				<form action="url" class="form" id="add-member-form">
+					<label for="id">ID:</label>
+					<input type="number" id="id" name="id" required>
+					
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required>
+					
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+					
+					<label for="gender">Gender:</label>
+					Male:<input type="radio" id="gender" name="gender" value="Male">
+						    Female:<input type="radio" id="gender" name="gender" value="Female">
+					
+					<label for="phone">Phone:</label>
+					<input type="tel" id="phone" name="phone" required>
+					<button type="submit" class="button">Add Member</button>
+				</form>
+				<form class="form" id="remove-member-form">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+					<button type="submit" class="button">Remove Member</button>
+				</form>
+				<form class="form" id="update-details-form">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+					<label for="phone">New Phone:</label>
+					<input type="tel" id="phone" name="phone" required>
+					<button type="submit" class="button">Update Details</button>
+				</form>
+				<div id="fetch-details-section"></div>
+			</div>
+		</main>
+		<script src="rcb.js"></script>
+	</body>
+</html>
